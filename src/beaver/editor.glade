@@ -17,7 +17,7 @@
             <child>
               <object class="GtkMenuItem" id="menuitem1">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">_Файл</property>
+                <property name="label" translatable="yes">File</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu1">
@@ -34,7 +34,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem2">
-                        <property name="label" translatable="yes">_Открыть...</property>
+                        <property name="label" translatable="yes">Open...</property>
                         <property name="visible">True</property>
                         <property name="use_underline">True</property>
                         <property name="image">image2</property>
@@ -53,7 +53,7 @@
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="imagemenuitem4">
-                        <property name="label">Сохранить _как...</property>
+                        <property name="label">Save as..</property>
                         <property name="visible">True</property>
                         <property name="use_underline">True</property>
                         <property name="image">image3</property>
@@ -82,7 +82,7 @@
             <child>
               <object class="GtkMenuItem" id="menuitem2">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">_Правка</property>
+                <property name="label" translatable="yes">Edit</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu2">
@@ -112,7 +112,7 @@
             <child>
               <object class="GtkMenuItem" id="menuitem3">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">_Вид</property>
+                <property name="label" translatable="yes">View</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu4">
@@ -120,7 +120,7 @@
                     <child>
                       <object class="GtkCheckMenuItem" id="checkmenuitem1">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">Панель инструментов</property>
+                        <property name="label" translatable="yes">Toolbar</property>
                         <property name="use_underline">True</property>
                         <property name="active">True</property>
                       </object>
@@ -128,7 +128,7 @@
                     <child>
                       <object class="GtkCheckMenuItem" id="checkmenuitem2">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">Строка состояния</property>
+                        <property name="label" translatable="yes">Statusbar</property>
                         <property name="use_underline">True</property>
                         <property name="active">True</property>
                       </object>
@@ -140,7 +140,7 @@
             <child>
               <object class="GtkMenuItem" id="menuitem5">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">С_ервис</property>
+                <property name="label" translatable="yes">Settings</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu_service">
@@ -148,7 +148,7 @@
                     <child>
                       <object class="GtkMenuItem" id="menuitem_plugins">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">_Модули</property>
+                        <property name="label" translatable="yes">Modules</property>
                         <property name="use_underline">True</property>
                       </object>
                     </child>
@@ -160,7 +160,7 @@
                     <child>
                       <object class="GtkMenuItem" id="menuitem_ifaces">
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">_Интерфейс</property>
+                        <property name="label" translatable="yes">Network Interface</property>
                         <property name="use_underline">True</property>
                       </object>
                     </child>
@@ -171,7 +171,7 @@
             <child>
               <object class="GtkMenuItem" id="menuitem4">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">_Справка</property>
+                <property name="label" translatable="yes">Help</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu3">
@@ -317,8 +317,9 @@
                   <object class="GtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
+                    <property name="yalign">0.49000000953674316</property>
                     <property name="ypad">3</property>
-                    <property name="label" translatable="yes"> Набор пакетов:</property>
+                    <property name="label" translatable="yes">Packets:</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -342,7 +343,7 @@
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="ypad">3</property>
-                    <property name="label" translatable="yes"> Редактируемый пакет:</property>
+                    <property name="label" translatable="yes">Selected Packet:</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -428,15 +429,14 @@
     <property name="type_hint">normal</property>
     <property name="program_name">Beaver</property>
     <property name="version">1.0.1</property>
-    <property name="copyright" translatable="yes">Copyright © 2009-2010 Alex Korovyansky</property>
+    <property name="copyright" translatable="yes">Copyright © 2009-2011 Alex Korovyansky</property>
     <property name="comments" translatable="yes">Visual network packets builder.</property>
     <property name="website">korovyansk@gmail.com</property>
     <property name="license" translatable="yes">GPL v2 License</property>
-    <property name="authors">Алексей Коровянский</property>
+    <property name="authors">Alex Korovyansky</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
-        <property name="spacing">2</property>
         <child>
           <placeholder/>
         </child>

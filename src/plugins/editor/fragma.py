@@ -11,7 +11,7 @@ def neighbor_file_path(filename):
 
 def fm(widget):
     global label
-    label.set_label("Введите правило фрагменатции:")
+    label.set_label("Enter fragmentation rule:")
     global dialog
     response = dialog.run()
     dialog.hide()
@@ -40,7 +40,7 @@ def fm(widget):
 environment = None
 sep = gtk.SeparatorMenuItem()
 sep.show()
-fm_item = gtk.MenuItem("фрагментирование выбранного пакета")
+fm_item = gtk.MenuItem("Fragment selected packet")
 fm_item.connect("activate", fm)
 fm_item.show()
 

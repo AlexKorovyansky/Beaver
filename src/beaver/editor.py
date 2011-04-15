@@ -1,4 +1,10 @@
 # coding=UTF-8
+
+## This file is part of Beaver
+## See https://github.com/korovyansk/Beaver for more informations
+## Copyright (C) Alex Korovyansky <korovyansk@gmail.com>
+## This program is published under a GPLv2 license
+
 __author__="Alex Korovyansky"
 __date__ ="$15.04.2010 12:15:36$"
 
@@ -37,19 +43,19 @@ class PacketEditor(object):
     def new(self, *args):
         self.filename = None
         self.packetsmodel.set_packets(PacketList())
-        self.statusbar.push(0, "Создан пустой набор")     
+        self.statusbar.push(0, "Create empty set of packets")     
         
     def open_from_file(self, filename = None):
         if(filename is not None):
             self.filename = filename
         packets = PacketList()
         try:
-            self.statusbar.push(0, "Открывается файл %s ..." %self.filename)                    
+            self.statusbar.push(0, "Openning file %s ..." %self.filename)                    
             packets = rdpcap(self.filename)
         except Exception, e:                
-            self.statusbar.push(0, "Не удалось открыть файл %s..."%self.filename)
+            self.statusbar.push(0, "Cannot open file %s..."%self.filename)
         else:
-            self.statusbar.push(0, "Открыт %s" %self.filename)
+            self.statusbar.push(0, "Open %s" %self.filename)
         self.packetsmodel.set_packets(packets)
             
     def open(self, *args):        
@@ -63,7 +69,7 @@ class PacketEditor(object):
         if(filename is not None):
             self.filename = filename        
         try:
-            self.statusbar.push(0, "Сохраняется файл %s ..." %self.filename)                    
+            self.statusbar.push(0, "Saving file %s ..." %self.filename)                    
             packets = self.packetsmodel.packets
             logger.debug("try save packets to file %s" %self.filename)
             wrpcap(self.filename, packets)          
@@ -121,10 +127,10 @@ class PacketEditor(object):
             sendp(packets,iface=self.iface)
         except Exception, e:
             logger.warning("error while sending packets: %s" %e)
-            self.statusbar.push(0, "Не удалось отправить набор пакетов")
+            self.statusbar.push(0, "Error while sending packets, see console log for details")
         else:
             logger.debug("packets were sent succesfull")
-            self.statusbar.push(0, "Набор пакетов успешно отправлен")
+            self.statusbar.push(0, "Packets were sent successful")
             
     def about(self, *args):
         response = self.about_dialog.run()
@@ -179,7 +185,7 @@ class PacketEditor(object):
         self.save_as_action.set_sensitive(False) 
         self.view_toolbar_action.set_sensitive(False)
         self.view_statusbar_action.set_sensitive(False) 
-        self.statusbar.push(0, "Добро пожаловать!")
+        self.statusbar.push(0, "Welcome to Beaver, Visual TCP/IP Packet Editor!")
         self.window.maximize()
         self.window.show_all()
     
@@ -198,33 +204,33 @@ class PacketEditor(object):
 
     def init_dialogs(self):
         #открыть
-        self.open_dialog = gtk.FileChooserDialog("Открыть..",
+        self.open_dialog = gtk.FileChooserDialog("Open..",
                                None,
                                gtk.FILE_CHOOSER_ACTION_OPEN,
                                (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
                                 gtk.STOCK_OPEN, gtk.RESPONSE_OK))
         self.open_dialog.set_default_response(gtk.RESPONSE_OK)              
         filter = gtk.FileFilter()
-        filter.set_name("PCAP файлы")
+        filter.set_name("PCAP files")
         filter.add_pattern("*.pcap")
         self.open_dialog.add_filter(filter)   
         filter = gtk.FileFilter()
-        filter.set_name("Все файлы")
+        filter.set_name("All files")
         filter.add_pattern("*")
         self.open_dialog.add_filter(filter)
         #сохранить
-        self.save_dialog = gtk.FileChooserDialog("Сохранить как..",
+        self.save_dialog = gtk.FileChooserDialog("Save as..",
                                None,
                                gtk.FILE_CHOOSER_ACTION_SAVE,
                                (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
                                 gtk.STOCK_SAVE, gtk.RESPONSE_OK))
         self.save_dialog.set_default_response(gtk.RESPONSE_OK)                
         filter = gtk.FileFilter()
-        filter.set_name("PCAP файлы")
+        filter.set_name("PCAP files")
         filter.add_pattern("*.pcap")
         self.save_dialog.add_filter(filter)   
         filter = gtk.FileFilter()
-        filter.set_name("Все файлы")
+        filter.set_name("All files")
         filter.add_pattern("*")
         self.save_dialog.add_filter(filter)
 

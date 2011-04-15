@@ -18,7 +18,7 @@ def fz(widget):
 environment = None
 sep = gtk.SeparatorMenuItem()
 sep.show()
-fz_item = gtk.MenuItem("Случайное заполнение выбранного пакета")
+fz_item = gtk.MenuItem("Fuzz selected packet")
 fz_item.connect("activate", fz)
 fz_item.show()
 

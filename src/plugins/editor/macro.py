@@ -11,7 +11,7 @@ def neighbor_file_path(filename):
 
 def pm(widget):
     global label
-    label.set_label("Введите макрос для выбранного пакета:")
+    label.set_label("Enter macros for selected packet:")
     global last_pm
     global entry_macros   
     entry_macros.set_text(last_pm)     
@@ -37,7 +37,7 @@ def pm(widget):
     
 def psm(widget):
     global label
-    label.set_label("Введите макрос для набора пакета:")
+    label.set_label("Enter macros for set of packets:")
     global last_psm
     global entry_macros   
     entry_macros.set_text(last_psm)        
@@ -66,10 +66,10 @@ last_pm = ""
 last_psm = ""
 sep = gtk.SeparatorMenuItem()
 sep.show()
-pm_item = gtk.MenuItem("макрос для выбранного пакета")
+pm_item = gtk.MenuItem("Macros for selected packet")
 pm_item.connect("activate", pm)
 pm_item.show()
-psm_item = gtk.MenuItem("макрос для набора пакетов")
+psm_item = gtk.MenuItem("Macros for set of packets")
 psm_item.connect("activate", psm)
 psm_item.show()
 
