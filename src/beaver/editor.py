@@ -75,10 +75,10 @@ class PacketEditor(object):
             wrpcap(self.filename, packets)          
         except Exception, e:                
             logger.debug("error while saving: %s" %e)
-            self.statusbar.push(0, "Не удалось сохранить файл %s..."%self.filename)
+            self.statusbar.push(0, "Error while saving, see console log for details %s..."%self.filename)
         else:
             logger.debug("packets were saved succesfull")
-            self.statusbar.push(0, "Сохранено в %s" %self.filename)                    
+            self.statusbar.push(0, "Saved in %s" %self.filename)                    
     
     def save(self, *args):
         if(self.filename is None):
