@@ -7,8 +7,7 @@ For run application use **sudo_beaver_run.sh** script.
 **Author:** Alex Korovyansky  
 **License:** GPLv2  
 
-Questions, feedback and ideas please send to e-mail: [korovyansk@gmail.com](korovyansk@gmail.com)
-
+Questions, feedback and ideas please send to e-mail: <korovyansk@gmail.com>
 Визуальный конструктор пакетов
 ==========
 
@@ -19,4 +18,4 @@ Questions, feedback and ideas please send to e-mail: [korovyansk@gmail.com](koro
 **Автор программы:** Коровянский Алексей  
 **Лицензия:** GPLv2
 
-Вопросы и пожелания пожалуйста оправляйте на e-mail: [korovyansk@gmail.com](korovyansk@gmail.com)
+Вопросы и пожелания пожалуйста оправляйте на e-mail: <korovyansk@gmail.com>
